@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
 
@@ -14,7 +15,7 @@ class Main
         list.getFirst();
         list.getLast();
       //  System.out.println(list);
-        list.add(0,-1);
+        list.add(0,-1); // add by index
         list.addAll(Arrays.asList(5,6,7,8,9));
         list.remove(1); // remove element at index 1
      //   list.removeAll(list); // remove all inside the ( list )
@@ -28,12 +29,16 @@ class Main
         animal.removeAll(animaltoremove);  // remove all elements of animaltoremove from animal
         System.out.println(animal);
        // System.out.println(list.get(2)); // by index
-          // add by index
+
+        Integer arr[]={99,88,77,66,55,44,33,22,11}; // non-primative array
+        ArrayList<Integer> arrlist=new ArrayList<>(Arrays.asList(arr)); // primative array can not be used
+        LinkedList<Integer> linklist=new LinkedList<>(arrlist);
 
 
-        System.out.println(list);
 
-        int arr[]={10,11};
+        System.out.println(linklist);
+
+
 
     }
     public static boolean remove(int x){
